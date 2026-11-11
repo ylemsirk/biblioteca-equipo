@@ -1,5 +1,4 @@
-public static class GestionPrestamos
+public static class Reportes
 {
-    public static void Prestar() { Console.WriteLine("Pendiente: Integrante 4"); }
-    public static void Devolver() { Console.WriteLine("Pendiente: Integrante 4"); }
+    public static void Mostrar() { Console.WriteLine("Pendiente: Integrante 1"); }
 }
