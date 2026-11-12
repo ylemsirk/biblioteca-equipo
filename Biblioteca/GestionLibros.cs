@@ -5,6 +5,14 @@ public static class GestionLibros
     {
         Console.WriteLine("--- REGISTRAR LIBRO ---");
         string titulo = Utilidades.LeerTexto("Titulo: ");
+
+        if (ExisteTitulo(titulo))
+    {
+        Console.WriteLine("Ese libro ya esta registrado.");
+        return;
+    }
+
+
         string autor = Utilidades.LeerTexto("Autor: ");
         int stock = Utilidades.LeerEntero("Stock (1-100): ", 1, 100);
 
@@ -54,4 +62,20 @@ public static class GestionLibros
         }
         return null;
     }
+
+    // Devuelve true si ya existe un libro con ese titulo
+public static bool ExisteTitulo(string titulo)
+{
+    for (int i = 0; i < Datos.Libros.Count; i++)
+    {
+        if (Datos.Libros[i].Titulo.ToLower() == titulo.ToLower())
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+
+
 }
