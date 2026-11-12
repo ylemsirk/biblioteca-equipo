@@ -38,6 +38,9 @@ public static class GestionLibros
             Libro l = Datos.Libros[i];
             Console.WriteLine("{0,-5}{1,-30}{2,-20}{3,6}", l.Id, l.Titulo, l.Autor, l.Stock);
         }
+
+        Console.WriteLine();
+        Console.WriteLine($"Total de libros: {Datos.Libros.Count}");
     }
 // Recibe un id y devuelve el libro, o null si no existedotnet build
     public static Libro? BuscarPorId(int id)
