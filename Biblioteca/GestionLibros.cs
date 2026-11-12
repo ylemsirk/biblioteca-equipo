@@ -1,5 +1,6 @@
 public static class GestionLibros
 {
+    // Pide los datos de un libro y lo agrega a la lista
     public static void Registrar()
     {
         Console.WriteLine("--- REGISTRAR LIBRO ---");
@@ -19,7 +20,7 @@ public static class GestionLibros
         Console.WriteLine();
         Console.WriteLine($"Libro registrado con ID {nuevo.Id}: {nuevo.Titulo} ({nuevo.Stock} copias)");
     }
-
+// Muestra todos los libros en formato de tabla
     public static void Listar()
     {
         Console.WriteLine("--- LISTA DE LIBROS ---");
@@ -38,7 +39,7 @@ public static class GestionLibros
             Console.WriteLine("{0,-5}{1,-30}{2,-20}{3,6}", l.Id, l.Titulo, l.Autor, l.Stock);
         }
     }
-
+// Recibe un id y devuelve el libro, o null si no existedotnet build
     public static Libro? BuscarPorId(int id)
     {
         for (int i = 0; i < Datos.Libros.Count; i++)
